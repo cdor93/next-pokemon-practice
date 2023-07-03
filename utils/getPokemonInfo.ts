@@ -1,10 +1,10 @@
-import { PokemonDescription } from "@/interfaces"
+import { PokemonDescriptionInterface } from "@/interfaces"
 import pokeApi from "../api/pokeApi"
 
 
 const getPokemonInfo = async (nameOrId: string) => {
 
- const {data} = await pokeApi.get<PokemonDescription>(`/pokemon/${nameOrId}`)
+ const {data} = await pokeApi.get<PokemonDescriptionInterface>(`/pokemon/${nameOrId}`)
 
   return {
     id: data.id,
